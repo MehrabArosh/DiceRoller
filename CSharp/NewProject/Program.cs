@@ -47,6 +47,23 @@ class Program{
         Console.WriteLine(d2.Face);
         Console.WriteLine(d3.Face);
         Console.WriteLine(d4.Face);
-        
+        Dice dice1 = new();
+        Dice dice2 = new();
+        int dice1Score = 0, dice2Score = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            dice1.Roll();
+            dice2.Roll();
+            if (dice1.Face > dice2.Face)
+            {
+                dice1Score++;
+
+            }
+            else
+            {
+                dice2Score++;
+            }
+        }
+        Console.WriteLine($"The score is {dice1Score} to {dice2Score}");
     }
 }
